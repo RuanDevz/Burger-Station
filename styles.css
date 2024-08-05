@@ -1,0 +1,166 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-top: 2rem;
+    color: #343a40;
+}
+
+.category {
+    margin-bottom: 2rem;
+}
+
+.item {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.item label input[type="checkbox"] {
+    margin-right: 1rem;
+}
+
+.item label p {
+    margin: 0.5rem 0;
+    color: #6c757d;
+}
+
+.item-quantity {
+    width: 60px;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#cart {
+    background-color: #fff;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#cart-items li:last-child {
+    border-bottom: none;
+}
+
+#total-price {
+    font-weight: bold;
+}
+
+button {
+    display: inline-block;
+    margin: 1rem 0.5rem 0 0;
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button#checkout {
+    background-color: #007bff;
+}
+
+button#checkout:hover {
+    background-color: #0056b3;
+}
+
+button#cancel-order {
+    background-color: #dc3545;
+}
+
+button#cancel-order:hover {
+    background-color: #c82333;
+}
+
+#checkout-section {
+    background-color: #fff;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none;
+}
+
+#checkout-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#checkout-form label {
+    margin-top: 1rem;
+}
+
+#checkout-form input, #checkout-form select {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h3 {
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item label {
+        flex-direction: column;
+    }
+
+    .item-quantity {
+        margin: 0.5rem 0 0 0;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Burger Station</h1>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Cardápio</h2>
+            <div class="category">
+                <h3>Hambúrgueres</h3>
+                <div class="item">
+                    <label>
+                        <input type="checkbox" class="menu-item" data-name="Cheeseburger" data-price="12.00">
+                        Cheeseburger - R$12,00
+                        <p>Delicioso hambúrguer com queijo</p>
+                        <input type="number" class="item-quantity" value="1" min="1">
+                    </label>
+                </div>
+                
+            </div>
+            <div class="category">
+                <h3>Salgados</h3>
+                <div class="item">
+                    <label>
+                        <input type="checkbox" class="menu-item" data-name="Coxinha" data-price="5.00">
+                        Coxinha - R$5,00
+                        <p>Tradicional coxinha de frango</p>
+                        <input type="number" class="item-quantity" value="1" min="1">
+                    </label>
+                </div>
+                
+            </div>
+            <div class="category">
+                <h3>Bebidas</h3>
+                <div class="item">
+                    <label>
+                        <input type="checkbox" class="menu-item" data-name="Refrigerante" data-price="3.00">
+                        Refrigerante - R$3,00
+                        <p>Refrigerante gelado de diversos sabores</p>
+                        <input type="number" class="item-quantity" value="1" min="1">
+                    </label>
+                </div>
+               
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>Carrinho de Compras</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: R$<span id="total-price">0.00</span></p>
+            <button id="add-more-items">Adicionar mais itens</button>
+            <button id="checkout">Finalizar Pedido</button>
+        </section>
+
+        <section id="checkout-section" style="display: none;">
+            <h2>Finalizar Pedido</h2>
+            <form id="checkout-form">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" required>
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" required>
+                <label for="payment-method">Método de Pagamento:</label>
+                <select id="payment-method">
+                    <option value="credit">Cartão de Crédito</option>
+                    <option value="debit">Cartão de Débito</option>
+                    <option value="pix">Pix</option>
+                </select>
+                <h3>Resumo do Pedido</h3>
+                <ul id="order-summary"></ul>
+                <p>Total: R$<span id="order-total-price">0.00</span></p>
+                <button type="submit">Confirmar Pedido</button>
+                <button type="button" id="cancel-order">Cancelar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
